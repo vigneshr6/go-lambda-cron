@@ -1,0 +1,1 @@
+@echo off& set GOOS=linux& go build -o target/main& %USERPROFILE%\Go\bin\build-lambda-zip.exe -output target/main.zip target/main& aws lambda update-function-code --function-name go-lambda-cron --zip-file fileb://target/main.zip
